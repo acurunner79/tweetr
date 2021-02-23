@@ -45,3 +45,11 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 26ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 2003)
 
 
+Started GET "/tweets" for ::1 at 2021-02-23 16:14:57 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:3:in `index'
+Completed 200 OK in 39ms (Views: 17.7ms | ActiveRecord: 11.2ms | Allocations: 6467)
+
+
