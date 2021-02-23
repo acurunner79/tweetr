@@ -167,3 +167,18 @@ Processing by TweetsController#create as */*
 Completed 201 Created in 15ms (Views: 0.6ms | ActiveRecord: 7.2ms | Allocations: 1939)
 
 
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:17:41 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"NOT Fake news!!", "content"=>"I won the lottery", "author"=>"Jorge Soto", "id"=>"3", "tweet"=>{"title"=>"NOT Fake news!!", "content"=>"I won the lottery", "author"=>"Jorge Soto"}}
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:36:in `get_tweet'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:25:in `update'
+  [1m[36mTweet Update (0.7ms)[0m  [1m[33mUPDATE "tweets" SET "title" = $1, "updated_at" = $2 WHERE "tweets"."id" = $3[0m  [["title", "NOT Fake news!!"], ["updated_at", "2021-02-23 23:17:42.062611"], ["id", 3]]
+  ↳ app/controllers/tweets_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:25:in `update'
+Completed 200 OK in 35ms (Views: 0.9ms | ActiveRecord: 10.9ms | Allocations: 8449)
+
+

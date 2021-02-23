@@ -7,8 +7,8 @@ class TweetsController < ApplicationController
     end
 
     def show
-        tweet = Tweet.find(params[:id])
-        render(json: { tweet: tweet })
+        # tweet = Tweet.find(params[:id])
+        render(json: { tweet: @tweet })
     end
 
     def create
@@ -21,6 +21,10 @@ class TweetsController < ApplicationController
         end
       end
 
+      def update
+        @tweet.update(tweet_params)
+        render json: {tweet: @tweet}
+    end
       
     private
 
@@ -29,6 +33,6 @@ class TweetsController < ApplicationController
     end
 
     def get_tweet
-        @book = Tweet.find(params[:id])
+        @tweet = Tweet.find(params[:id])
     end
 end
