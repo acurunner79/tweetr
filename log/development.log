@@ -182,3 +182,18 @@ Processing by TweetsController#update as */*
 Completed 200 OK in 35ms (Views: 0.9ms | ActiveRecord: 10.9ms | Allocations: 8449)
 
 
+Started DELETE "/tweets/3" for ::1 at 2021-02-23 17:19:09 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#destroy as */*
+  Parameters: {"title"=>"NOT Fake news!!", "content"=>"I won the lottery", "author"=>"Jorge Soto", "id"=>"3", "tweet"=>{"title"=>"NOT Fake news!!", "content"=>"I won the lottery", "author"=>"Jorge Soto"}}
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:41:in `get_tweet'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+Completed 204 No Content in 26ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 7875)
+
+
