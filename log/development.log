@@ -197,3 +197,48 @@ Processing by TweetsController#destroy as */*
 Completed 204 No Content in 26ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 7875)
 
 
+Started GET "/meta" for ::1 at 2021-02-23 17:25:59 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MetaController#about as HTML
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 1887)
+
+
+Started GET "/meta" for ::1 at 2021-02-23 17:26:10 -0600
+Processing by MetaController#about as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:26:13 -0600
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 16.2ms | ActiveRecord: 9.0ms | Allocations: 4671)
+
+
+Started GET "/meta" for ::1 at 2021-02-23 17:26:20 -0600
+Processing by MetaController#about as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/meta" for ::1 at 2021-02-23 17:26:32 -0600
+Processing by MetaController#about as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-02-23 17:26:47 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/djsmoothbackupmac/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/djsmoothbackupmac/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.2ms | Allocations: 295)
+Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 2284)
+
+
+Started GET "/meta" for ::1 at 2021-02-23 17:28:09 -0600
+Processing by MetaController#about as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/meta" for ::1 at 2021-02-23 17:28:57 -0600
+Processing by MetaController#about as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 115)
+
+
